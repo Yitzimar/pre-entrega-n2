@@ -1,0 +1,242 @@
+/* Importamos la fuente elegante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 🎨 Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 🎭 Animación de carga */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 🌟 Encabezado */
+header {
+    background: linear-gradient(90deg, #2c3e50, #1abc9c);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🔗 Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #34495e;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 📖 Contenido Principal */
+main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ✨ Secciones */
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* 🐱 Imágenes */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.story-image {
+    max-width: 20%; /* Imágenes más pequeñas */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ✍️ Texto Bajo Imágenes */
+figcaption {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* 📌 Listas */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+    padding-left: 10px;
+    position: relative;
+    font-weight: 400;
+}
+
+ul li::before {
+    content: "🐾";
+    position: absolute;
+    left: -20px;
+    font-size: 1.2rem;
+    color: #1abc9c;
+}
+
+/* 🎭 Tarjetas de Funcionalidad */
+.feature {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔘 Botones */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1abc9c;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
+
+/* 📍 Pie de Página */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+/* 🎭 Animación del Pie de Página */
+footer p {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* 📱 Diseño Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .story-image {
+        max-width: 60%; /* Imágenes un poco más grandes en móviles */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .button {
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
